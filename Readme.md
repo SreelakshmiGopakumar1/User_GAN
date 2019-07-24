@@ -5,9 +5,13 @@
 # Run
 
  - Training from random weights
- `python gan_ui_main.py -d [dataset path] -s [save path] -u [user evaluation value] -init`
+ ```
+ python gan_ui_main.py -d [dataset path] -s [save path] -u [user evaluation value] -init
+ ```
  - Normal training
-  `python gan_ui_main.py -d [dataset path] -s [save path] -u [user evaluation value] -r `
+ ```
+  python gan_ui_main.py -d [dataset path] -s [save path] -u [user evaluation value] -r 
+  ```
   
  # Note
 
