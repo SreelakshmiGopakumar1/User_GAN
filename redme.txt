@@ -1,0 +1,25 @@
+To run the code use the following command
+If you are traning from random weights:
+	python gan_ui_main.py -d [dataset path] -s [save path] -u [user evaluation value] -init
+Otherwise
+	python gan_ui_main.py -d [dataset path] -s [save path] -u [user evaluation value] -r 
+
+[dataset path]  this refers to the path where your data is saved
+for example im my case it is in D:\Antonio\Materials\Materials\Training set\MODIS
+[save path]: this is the path where I want to save the results. This is important because the 
+code is set to automatically figure out the restore path in case of the second option. Hence, the folder 
+where the first model will be saved is named as 0 and it increases by 1 after that.
+For exmaple: in my case for the first training the path is D:\Mesay\Retro-remote-sensing\GAN_UI\result\20190627\0
+after this I have folders D:\Mesay\Retro-remote-sensing\GAN_UI\result\20190627\1, D:\Mesay\Retro-remote-sensing\GAN_UI\result\20190627\2 ...
+The index of folders 0 1, 2, 3, ... is taken based on the number of epochs and the interval to get user feedback.
+For example: If Epoch==2500, and interval=100, you will have 25 folders starting from 0 to 24
+
+[user evaluation value]  this is the user feedback value
+
+Example:
+python gan_ui_main.py -d D:\Antonio\Materials\Materials\Training set\MODIS -s D:\Mesay\Retro-remote-sensing\GAN_UI\result\20190627\0 -u 1.0 -init
+python gan_ui_main.py -d D:\Antonio\Materials\Materials\Training set\MODIS -s D:\Mesay\Retro-remote-sensing\GAN_UI\result\20190627\1 -u 1.5 -r
+python gan_ui_main.py -d D:\Antonio\Materials\Materials\Training set\MODIS -s D:\Mesay\Retro-remote-sensing\GAN_UI\result\20190627\2 -u 2.33 -r
+				.
+				.
+				.
